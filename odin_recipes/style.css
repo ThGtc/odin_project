@@ -1,0 +1,41 @@
+html{
+    background-color: #e0ddddc7;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+li{
+    width: auto;
+    height: 100px;
+    padding: 20px;
+    margin-left:-36px
+    border: 5px solid orange;
+    flex:1;
+}
+#one{
+    background-color: lightblue;
+}
+#two{
+    background-color: lightcoral;
+}
+#three{
+    background-color: palegoldenrod;
+}
+
+.boite{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    height:500px;
+}
+.boite div{
+    background-color: grey;
+    border:solid white;
+    width:100px;
+    height:100px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
