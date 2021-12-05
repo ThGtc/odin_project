@@ -1,0 +1,158 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+    font-family: sans-serif
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1F2937;
+    justify-content: center;
+    padding : 0% 20% 5%;
+}
+
+.headerlogo {
+    font-size: 24px;
+    color:#F9FAF8;
+}
+
+.links {
+    display: flex;
+    gap:25px;
+}
+
+button {
+    background-color:#3882F6;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    text-decoration: none;
+    font:bolder 16px normal;
+    padding:0% 4%; /*Mémo utile : pour padding si tu ne remplis que deux sur 4, la valeur s'appliquera aux deux côtés visés (ex : haut+bas)*/
+    height: 15%;
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 18px;
+    color:#E5E7EB;
+}
+
+.header h1 {
+    font: 48px bolder;
+    color: #F9FAF8;
+}
+
+.firstblock {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    color:#E5E7EB;
+}
+.secondblock {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color:#F9FAF8;
+    background-color: gray;
+    height:60%;
+    width:100%;
+    margin-bottom: 25px;
+}
+
+.main h2 {
+    font-size: 36px;
+    font-weight: bolder;
+    color:#1F2937;
+    text-align: center;
+}
+
+.boxes {
+    display: flex;
+    flex-flow: row wrap; /* flex-flow = flex-direction & flex-wrap dans la même ligne*/
+    gap:100px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5%;
+    color:#696969
+}
+.square {
+    width:200px;
+}
+.box {
+    display: flex;
+    margin:20px;
+    border:#3882F6 solid 5px;
+    border-radius: 20%;
+    width: 150px;
+    height:150px;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    padding:5%
+}
+
+.quote p {
+    align-self: center;
+    width: 60%;
+    font:italic 36px lighter;
+    color: #1F2937;
+}
+.signature {
+    display: flex;
+    font:bolder 24px normal;
+    width: 80%;
+    justify-content:flex-end;
+}
+
+.calltoaction {
+    display: flex;
+    justify-content: center;
+    margin:5%;
+}
+
+.bluebox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    padding: 1%;
+    background-color: #3882F6;
+    color: white;
+}
+
+.bluebox h3 {
+    margin-bottom: -2%;
+}
+
+.right button {
+    border:white solid 2px;
+    border-radius: 10px;
+    font: bolder 16px normal;
+    width:150px;
+    padding: 4% 4%
+}
+
+.footer {
+    background-color: #1F2937;
+    color: white;
+    font:bolder 16px normal;
+    text-align: center;
+    padding:2%
+}
