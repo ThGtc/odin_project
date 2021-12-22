@@ -1,9 +1,15 @@
+/* on commence par déclarer les bases : les coups, les choix des joueurs puis le résultat final*/
+
 const moves = ["pierre", "papier", "ciseaux"];
 let playerChoice = "";
 let computerChoice = "";
 let finalResult = "";
+let winOrLose = "";
+let playerScore = 0;
+let computerScore = 0;
+let scoreBoard = "";
 
-/* On créé une fonction qui retourne au hasard Pierre Feuille ou Ciseau (servira + tard pour le tour de l'ordi) */
+/* On créé une fonction qui retourne au hasard Pierre Feuille ou Ciseau (pour le tour de l'ordi) */
 
 let computerPlay = () => {
     let result = moves[(Math.floor(Math.random() *3))];
@@ -11,8 +17,16 @@ let computerPlay = () => {
     return result;
     }
 
+/* puis une fonction pour le choix du joueur, en fiasant attention à la casse des choix (à simplifier, je pense)*/
+
 function playerMove () {
-    let playerSelection = prompt("Pierre, papier, ciseaux ?");
+    playerChoice = prompt("Pierre, papier, ciseaux ?").toLowerCase();
+    if ((playerChoice != "pierre") && (playerChoice != "papier") && (playerChoice != "ciseaux")) {
+        alert("Entre un choix valide !")
+        playerMove()
+    }
+}
+    /* ===> Premier jet, simplifié par la suite :)
     if (playerSelection.toLowerCase() == "pierre") {
         playerChoice = playerSelection.toLowerCase();
         return playerChoice;
@@ -21,12 +35,10 @@ function playerMove () {
         return playerChoice;
     } else  if (playerSelection.toLowerCase() == "papier") {
         playerChoice = playerSelection.toLowerCase();
-        return playerChoice;
-    } else {
-        alert("Entre un choix valide !")
-        playerMove()
-    }
-}
+        return playerChoice; }*/
+
+
+/* ensuite une fonction pour jouer une manche, avec les différentes possibilités pour le joueur : victoire, défaite ou égalité*/
 
 function playRound () {
     playerMove();
@@ -36,10 +48,13 @@ function playRound () {
     function whoWins () {
         if ((playerChoice === "papier" && computerChoice == "pierre") || (playerChoice == "pierre" && computerChoice == "ciseaux") || (playerChoice == "ciseaux" && computerChoice == "papier")) {
             winner = "Tu as gagné ! :)";
+            winOrLose = "win";
         } else if ((playerChoice == "papier" && computerChoice == "ciseaux") || (playerChoice == "pierre" && computerChoice == "papier") || (playerChoice == "ciseaux" && computerChoice == "pierre")) {
-            winner = "Tu as perdu :(";
+            winner = "Tu as perdu ! :(";
+            winOrLose = "lose";
         } else if ((playerChoice == "papier" && computerChoice == "papier") || (playerChoice == "pierre" && computerChoice == "pierre") || (playerChoice == "ciseaux" && computerChoice == "ciseaux")) {
             winner = "Pas de gagnant, match nul !"
+            winOrLose = "draw";
         }
     }
     whoWins();
@@ -47,5 +62,28 @@ function playRound () {
     return finalResult;
 };
 
-playRound();
-alert(finalResult);
+/* le jeu est prêt, à présent on peut faire une fonction pour jouer 1 manche, avec un tableau des scores*/
+
+function gameOn () {
+    console.log(playRound())
+    if (winOrLose == "win") {
+            playerScore ++;
+    } else if (winOrLose == "lose") {
+            computerScore ++;
+    }
+    scoreBoard = "Le score est de " + playerScore + " pour toi et de " + computerScore + " pour ton adversaire invisible. :)"
+    if (playerScore == 5) {
+        alert("Tu as gagné, beau gosse !")
+        console.log("Fin du match, victoire du joueur humain !")
+    } else if (computerScore == 5) {
+        alert("Bouh, tu as perdu !")
+        console.log("Fin du match, victoire de l'ordinateur !")
+    }
+}
+
+/* et finalement, une boucle pour jouer une partie en 5 manches, comme paramétré au dessus*/
+
+while ((playerScore < 5) && (computerScore < 5)) {
+    gameOn()
+    console.log(scoreBoard)
+};
