@@ -3,21 +3,19 @@
 const moves = ["pierre", "papier", "ciseaux"];
 let playerChoice = "";
 let computerChoice = "";
-let finalResult = "";
 let winOrLose = "";
 let playerScore = 0;
 let computerScore = 0;
 let scoreBoard = "";
 
-/* On créé une fonction qui retourne au hasard Pierre Feuille ou Ciseau (pour le tour de l'ordi) */
+/* on créé une fonction qui retourne au hasard Pierre Feuille ou Ciseau (pour le tour de l'ordi) */
 
 let computerPlay = () => {
     let result = moves[(Math.floor(Math.random() *3))];
     computerChoice = result;
-    return result;
     }
 
-/* puis une fonction pour le choix du joueur, en fiasant attention à la casse des choix (à simplifier, je pense)*/
+/* puis une fonction pour enregistrer le choix du joueur, en faisant attention à la casse des choix*/
 
 function playerMove () {
     playerChoice = prompt("Pierre, papier, ciseaux ?").toLowerCase();
@@ -26,19 +24,8 @@ function playerMove () {
         playerMove()
     }
 }
-    /* ===> Premier jet, simplifié par la suite :)
-    if (playerSelection.toLowerCase() == "pierre") {
-        playerChoice = playerSelection.toLowerCase();
-        return playerChoice;
-    } else if (playerSelection.toLowerCase() == "ciseaux") {
-        playerChoice = playerSelection.toLowerCase();
-        return playerChoice;
-    } else  if (playerSelection.toLowerCase() == "papier") {
-        playerChoice = playerSelection.toLowerCase();
-        return playerChoice; }*/
 
-
-/* ensuite une fonction pour jouer une manche, avec les différentes possibilités pour le joueur : victoire, défaite ou égalité*/
+/* ensuite une fonction pour jouer une manche, qui fait appel aux deux précédentes fonctions, avec les différents résultats : victoire, défaite ou égalité*/
 
 function playRound () {
     playerMove();
@@ -46,19 +33,22 @@ function playRound () {
     let result = "Vous avez choisi " + playerChoice + ", l'ordinateur a joué " + computerChoice;
     let winner = "";
     function whoWins () {
-        if ((playerChoice === "papier" && computerChoice == "pierre") || (playerChoice == "pierre" && computerChoice == "ciseaux") || (playerChoice == "ciseaux" && computerChoice == "papier")) {
+        if ((playerChoice === "papier" && computerChoice == "pierre") || (playerChoice == "pierre" && computerChoice == "ciseaux") ||
+        (playerChoice == "ciseaux" && computerChoice == "papier")) {
             winner = "Tu as gagné ! :)";
             winOrLose = "win";
-        } else if ((playerChoice == "papier" && computerChoice == "ciseaux") || (playerChoice == "pierre" && computerChoice == "papier") || (playerChoice == "ciseaux" && computerChoice == "pierre")) {
+        } else if ((playerChoice == "papier" && computerChoice == "ciseaux") || (playerChoice == "pierre" && computerChoice == "papier") ||
+        (playerChoice == "ciseaux" && computerChoice == "pierre")) {
             winner = "Tu as perdu ! :(";
             winOrLose = "lose";
-        } else if ((playerChoice == "papier" && computerChoice == "papier") || (playerChoice == "pierre" && computerChoice == "pierre") || (playerChoice == "ciseaux" && computerChoice == "ciseaux")) {
+        } else if ((playerChoice == "papier" && computerChoice == "papier") || (playerChoice == "pierre" && computerChoice == "pierre") || 
+        (playerChoice == "ciseaux" && computerChoice == "ciseaux")) {
             winner = "Pas de gagnant, match nul !"
             winOrLose = "draw";
         }
     }
     whoWins();
-    finalResult = result + ". \n" + winner;
+    let finalResult = result + ". \n" + winner;
     return finalResult;
 };
 
