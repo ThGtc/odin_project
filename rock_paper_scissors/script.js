@@ -17,7 +17,7 @@ replay.innerText = "Rejouer ?";
 let computerPlay = () => {
     let result = moves[(Math.floor(Math.random() *3))];
     computerChoice = result;
-    }
+    };
 
 // une fonction pour jouer une manche, qui fait appel aux deux précédentes fonctions, avec les différents résultats : victoire, défaite ou égalité*/
 
@@ -69,7 +69,7 @@ function gameOn () {
             button.style.opacity = '25%'
         });
     };
-}
+};
 
 // un event listener qui appelle&joue une manche lorsque l'on clique sur l'un des boutons & enregistre le choix du joueur
 
