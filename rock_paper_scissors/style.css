@@ -9,8 +9,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1.4rem;
 }
 
 .results > div{
     margin : 2%
+}
+
+.choice button{
+    border: solid black;
+    color:white;
+    background:rgb(146, 146, 146);
+    font-size: 1.5rem;
+    box-shadow: 0 0 .5rem black;
+}
+
+.replay{
+    padding: 0;
+    border: none;
+    color:darkred;
+    opacity: 75%;
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+.replay:hover{
+    font-size: 1.4rem;
+    opacity: 100%;
 }

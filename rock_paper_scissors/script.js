@@ -9,29 +9,19 @@ let computerScore = 0;
 let scoreBoard = "";
 let displayResult = document.querySelector('#roundResult');
 let replay = document.createElement('button');
-replay.innerText = "Rejouer ?" 
+replay.classList.add("replay");
+replay.innerText = "Rejouer ?";
 
-/* on créé une fonction qui retourne au hasard Pierre Feuille ou Ciseau (pour le tour de l'ordi) */
+// on créé une fonction qui retourne au hasard Pierre Feuille ou Ciseau (pour le tour de l'ordi) */
 
 let computerPlay = () => {
     let result = moves[(Math.floor(Math.random() *3))];
     computerChoice = result;
     }
 
-/* puis une fonction pour enregistrer le choix du joueur, en faisant attention à la casse des choix*/
-/*
-function playerMove () {
-    playerChoice = prompt("Pierre, papier, ciseaux ?").toLowerCase();
-    if ((playerChoice != "pierre") && (playerChoice != "papier") && (playerChoice != "ciseaux")) {
-        alert("Entre un choix valide !")
-        playerMove()
-    }
-}
-*/
-/* une fonction pour jouer une manche, qui fait appel aux deux précédentes fonctions, avec les différents résultats : victoire, défaite ou égalité*/
+// une fonction pour jouer une manche, qui fait appel aux deux précédentes fonctions, avec les différents résultats : victoire, défaite ou égalité*/
 
 function playRound () {
-    //playerMove();
     computerPlay();
     let result = "Vous avez choisi " + playerChoice + ", l'ordinateur a joué " + computerChoice;
     let winner = "";
@@ -53,10 +43,9 @@ function playRound () {
     whoWins();
     let finalResult = result + ". \n" + winner;
     displayResult.textContent = finalResult;
-    //return finalResult;
 };
 
-/* le jeu est prêt, à présent on fait une fonction pour jouer 1 manche, avec un tableau des scores*/
+// les mécanismes sont prêts, à présent on fait une fonction pour jouer 1 manche, avec un tableau des scores*/
 
 function gameOn () {
     playRound()
@@ -67,20 +56,23 @@ function gameOn () {
     }
     scoreBoard = "Le score est de " + playerScore + " pour toi et de " + computerScore + " pour ton adversaire invisible. :)"
     if (playerScore == 5) {
-        alert("Tu as gagné, beau gosse !")
+        alert("Tu as gagné, félicitations !")
         displayResult.textContent = "Fin du match, victoire du joueur humain !"
     } else if (computerScore == 5) {
         alert("Bouh, tu as perdu !")
         displayResult.textContent = "Fin du match, victoire de l'ordinateur !"
     } if ((playerScore == 5) || (computerScore == 5)){
         document.querySelector('.results').appendChild(replay)
+        replay.hidden = false,
         buttons.forEach((button) => {
-            button.disabled = true ;
+            button.disabled = true
+            button.style.opacity = '25%'
         });
     };
 }
 
-/* un event listener qui appelle+joue une manche lorsque l'on clique sur l'un des boutons & enregistre le choix du joueur :) */
+// un event listener qui appelle&joue une manche lorsque l'on clique sur l'un des boutons & enregistre le choix du joueur
+
 let displayScore = document.querySelector('#scoreboard');
 let buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
@@ -91,14 +83,14 @@ buttons.forEach((button) => {
     })
 });
 
-// enfin, on voudrait ajouter une fonction pour rejouer lorsque le score est arrivé à 5
+// enfin, on paramètre le bouton qui apparaît pour recommencer lorsque le score est arrivé à 5
 
 replay.addEventListener('click', () => {
-    console.log("Ok ça clique")
     playerScore = 0,
     computerScore = 0
     buttons.forEach((button) => {
-        button.disabled = false;
+        button.disabled = false,
+        button.style.opacity = '100%'
     })
     displayResult.textContent = " ",
     displayScore.textContent = " ",
