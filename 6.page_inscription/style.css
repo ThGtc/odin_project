@@ -1,0 +1,145 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(./font/Norse-Bold.otf);
+}
+body{
+    display: flex;
+    margin: 0;
+    width: 100vw;
+}
+
+.left{
+    width: 60vw;
+    height: auto;
+    background: url(./img/left_back) center center;
+    background-size:cover;
+}
+
+.left .logo{
+    background-color: rgba(0, 0, 0, 0.5) ;
+    margin-top: 30vh;
+    font-family: norse-bold, sans-serif;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    font-size: 64pt;
+    display: flex;
+    justify-content: center;
+}
+
+.logo .image{
+    height: 64pt;
+    width: auto;
+    margin-right: .25em;
+}
+
+.left .credits{
+    display: flex;
+    justify-content: center;
+    margin-top:58vh;
+}
+
+.credits > a{
+    text-decoration: none;
+    color:pink
+}
+
+.right {
+    flex-grow: 2;
+    background-color: rgb(240, 245, 250);
+}
+
+.right > * {
+    padding-left:5em
+}
+
+.topRight >p {
+    font-size: 16pt;
+}
+
+.topRight{
+    padding-right: 15em;
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+.middleRight{
+    max-width:500rem;
+    background-color: white;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.384);
+}
+
+.middleRight p{
+    font-size: 15pt;
+    font-weight: 900;
+}
+
+.signUpForm{
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 60em;
+}
+
+.formQuestion{
+    max-width: 20rem;
+    margin-bottom: 1rem;
+    margin-right: 4.5rem;
+    text-transform:uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(85, 85, 85);
+}
+
+.formQuestion span{
+    font-size: 9pt;
+    color:red;
+    text-transform: none;
+}
+
+label{
+    font-size: 10pt;
+}
+
+input{
+    border:#E5E7EB thin solid;
+}
+
+input:focus{
+    border: blue solid;
+    border-width: 1px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.384);
+}
+
+label, .signUpForm input{
+    width: 20em;
+    display: flex;
+    margin-bottom: 0.2rem;
+}
+
+.signUpFormButton{
+    margin-top: 2rem;
+    margin-left: 4em;
+    padding-left: 0;
+    border-radius: 10%;
+    border: 0;
+    box-shadow: 2px black;
+    background-color: rgb(201, 114, 0);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 4rem;
+    width: 20rem;
+    font-size: 15pt;
+    font-weight: 600;
+    color: white;
+
+}
+
+.bottomText{
+    font-size: 13pt;
+    margin-top: 2rem;
+}
+
+.bottomText a {
+    color:rgb(201, 114, 0);
+    text-decoration: none;
+    font-weight: 600;
+}
