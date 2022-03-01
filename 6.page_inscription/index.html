@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inscription</title>
+</head>
+<body>
+    
+    <div class="left">
+        <div class="logo"><img src="./img/odin-lined.png" alt="ha" class="image">Odin Rocks !</div>
+        <div class="credits"><a href="https://unsplash.com/photos/3WuP3FdeG_I">Photo by Desiree Rasor</a></div>
+    </div>
+    <div class="right">
+            <div class="topRight">
+                <p>Ceci n'est pas une vraie page d'inscription, évidemment ! Mais cela pourrait bien ressembler à un formulaire pour changer de vie, ou un autre truc tout aussi génial.
+                    <br>Alors inscrivez-vous dès maintenant pour en faire partie.</p>
+                <p><em>Vous</em> savez que c'est ce qu'il <em>vous</em> faut.</p>
+            </div>
+       <div class="middleRight">
+           <p>Allons-y !</p>
+           <form action="" method="post" class="signUpForm" id="signUpForm">
+               <div class="formQuestion">
+                   <label for="firstName">Prénom</label>
+                   <input type="text" name="firstName" id="firstName" required>
+               </div>
+
+               <div class="formQuestion">
+                   <label for="lastName">Nom</label>
+                   <input type="text" name="lastName" id="lastName" required autofocus>
+                   <span class="validity"></span>
+               </div>
+
+               <div class="formQuestion">
+                   <label for="mail">Email</label>
+                   <input type="email" name="mail" id="mail" required>
+               </div>
+
+               <div class="formQuestion">
+                   <label for="telephone">Numéro de téléphone</label>
+                   <input type="tel" name="telephone" id="telephone" placeholder="+33..." required>
+               </div>
+
+               <div class="formQuestion">
+                   <label for="password">Mot de passe</label>
+                   <input type="password" name="password" id="password" required>
+               </div>
+
+                <div class="formQuestion">
+                   <label for="verifPassword">Confirmez le mot de passe</label>
+                   <input type="password" name="verifPassword" id="verifPassword" required onchange="checkPassword()">
+                   <span id="message"></span>
+                </div> 
+           </form>
+       </div>
+       <button type="submit" form="signUpForm" class="signUpFormButton">Créer un compte</button>
+       <p class="bottomText">Vous avez déjà un compte ? <a href="">Connectez-vous.</a></p>
+    </div>
+</body>
+<script>
+    function checkPassword(){
+        if(document.getElementById('password').value === document.getElementById('verifPassword').value){
+                document.getElementById('message').innerHTML = ""
+            } else {
+                document.getElementById('message').innerHTML = "Les mots de passes ne sont pas identiques !"
+            }
+    }
+</script>
+</html>
