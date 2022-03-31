@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(153, 227, 245, 0.35);
+    overflow-x: hidden;
+}
+
+.projectHat{
+    color: grey;
+    text-align: center;
+}
+
+.speedrun, .clear{
+    padding: 0;
+    border:none;
+    background-color: inherit;
+    font: inherit;
+}
+
+.speedrun:hover, .clear:hover{
+    color:red;
+}
+
+.formArea{
+    display: flex;
+    flex-direction: column;
+}
+
+.newBook{
+    margin: 2em;
+    font-size: 15pt;
+    width: 100vw;
+    min-height: 3em;
+    border: none;
+    align-self: center;
+    background-color: rgba(247, 208, 183, 0.5);
+}
+
+.addBook{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items:center;
+}
+
+.formWrapper{
+    padding: 2em;
+    position:relative;
+    background:white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    justify-content: center;
+    gap:1em;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.close:hover {
+    color: #06D85F;
+}
+
+.displayedBook{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.checkRead{
+    border-bottom: solid rgb(99, 172, 255, .5);
+    padding-bottom: .5em;
+}
+
+.submitButton{
+    background-color: white;
+    border: none;
+    font-size: 13pt;
+}
+
+.boxBook{
+    justify-content: center;
+    margin: 1em;
+    border: solid rgba(0, 0, 0, 0.5);
+    min-height: 5rem;
+    min-width: 100px;
+    max-width: 825px;
+    background-color: white;
+    padding: 2em;
+    overflow-x: hidden;
+}
+
+.boxBook:hover{
+    transform: scale(1.1);
+}
+
+.boxTitle, .boxAuthor, .boxPages, .boxReadStatus{
+    border-bottom: grey solid;
+    padding-bottom: 1em;
+}
+
+.boxTitle{
+    font-size: 14pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+.downButtons{
+    gap:1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.readButton, .notReadButton, .deleteButton{
+    border:none;
+    border-radius: 50px;
+    color: black;
+    font-size: 12pt;
+    min-height: 3em;
+    min-width: 8em;
+}
+
+.readButton{
+    background-color: rgba(0, 255, 0, 0.50);
+}
+
+.readButton:hover{
+    background-color: rgba(0, 255, 0, 0.75);
+}
+
+.notReadButton{
+    background-color: rgba(255, 0, 0, 0.50);
+}
+.notReadButton:hover{
+    background-color: rgba(255, 0, 0, 0.75);
+}
+
+.deleteButton{
+    color:red;
+    background-color:rgba(255, 255, 255, 0.473);
+    min-width: 3em;
+}
+.deleteButton:hover{
+    background-color: white;
+}
