@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>JS library</title>
+</head>
+<body>
+    
+    <header>
+    <h1 class="projectHat">JS Bib</h1>
+    <p class="intro">Un projet de biblitohèque développé en JS afin de suivre ses lectures. Appuyez sur <em>nouveau livre</em> pour commencer à la remplir ! </p>
+    <p class="intro">...Ou alors appuyez <button class="speedrun">ici</button> pour speedrun le remplissage et <button class="clear">là</button> pour faire le ménage.</p>
+    <div class="formArea">
+
+        <button class="newBook">Nouveau livre</button>
+
+        <form action="index.html" method="post" class="addBook" id="addBook">
+            <div class="formWrapper">
+
+                <div class="popUpHeader">
+                    <h3>Ajouter un livre à la biblitohèque</h3>
+                    <a class="close" href="#">&times;</a>
+                </div>
+
+                <label for="bookTitle">Titre du livre</label>
+                <input type="text" name="bookTitle" id="bookTitle" maxlength="50" required>
+
+                <label for="bookAuthor">Auteur du livre</label>
+                <input type="text" name="bookAuthor" id="bookAuthor" maxlength="50" required>
+
+                <label for="bookPages">Nombre de pages</label>
+                <input type="number" name="bookPages" id="bookPages" min="1" required>
+
+                <div class="checkRead">
+                    <label for="bookStatus">Lu ?</label>
+                    <input type="checkbox" name="bookStatus" id="bookStatus">
+                </div>
+
+                <button type="submit" class="submitButton">Ajouter un nouveau livre</button>
+            </div>
+
+    </div>
+    </header>
+    </form>
+    <div class="displayedBook"></div>
+    
+</body>
+</html>
