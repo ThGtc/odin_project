@@ -1,0 +1,90 @@
+.title, .winner, .leftScore, .rightScore{
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 30pt;
+    font-family: sans-serif;
+}
+
+.playArea{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.leftScore > br, .rightScore >br{
+    display: block;
+    content: "";
+    margin-top: 1em;
+}
+
+.gameBoard{
+    display: grid;
+    grid-template-rows: repeat(3, 9em);
+    grid-template-columns: repeat(3, 9em);
+    justify-content: center;
+}
+
+.gameBoard > *{
+    border: solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30pt;
+    font-family: sans-serif;
+}
+
+.newGame{
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items:center;
+}
+
+
+.newGame > p, .buttonsPawn{
+    padding: 2em;
+    position:relative;
+    background:rgba(255, 255, 255);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    justify-content: center;
+    gap:1em;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.buttonsPawn{
+    background: none;
+}
+
+.buttonsPawn > *, .resetGame{
+    font-size: 15pt;
+    height: 5em;
+    width: 15em;
+    background-color:white;
+    border-radius: 20px;
+}
+
+.winner{
+    margin-bottom: 1em;
+}
+
+.resetGameThing{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonsPawn > *:hover{
+    background-color: grey;
+    border-color: grey;
+}
+
+.winner{
+    margin-top: 2em;
+}
