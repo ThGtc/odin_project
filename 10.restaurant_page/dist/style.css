@@ -1,0 +1,162 @@
+/*General content : body, header, footer*/
+
+body{
+    margin: 0;
+    padding:0;
+    overflow: scroll;
+}
+
+#content{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 98.5vh;
+    flex-direction: column;
+}
+
+#superTitle{
+    background: no-repeat center url(../src/img/headerbg.jpg);
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 16vh;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#superTitle > h1{
+    color: black; /*faudrait trouver le moyen de faire bordure noire sur couleur ppale blanche*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 5vh; 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#navBar{
+    margin-top: 1.5em;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4,1fr);
+    margin-bottom: 2em;
+}
+
+#navBar > *:hover{
+    cursor: pointer;
+}
+
+div[id^="navBox"]{
+    font-size: 16pt;
+    color: white;
+}
+
+footer{
+    background-color: rgba(245, 245, 220, 0.521);
+    margin-top: auto;
+    text-align: center;
+}
+
+/*page d'accueil*/
+
+#main{
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr);
+    justify-items: center;
+    gap: 1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+div[id^="contentBox"]{
+    overflow:auto;
+    width: 50vw;
+    height: 20vh;
+    scrollbar-width: none;
+}
+
+#contentBox1{
+    border: dotted grey;
+}
+
+div[id^="contentBox"]::-webkit-scrollbar{
+    display: none;
+}
+
+#contentBox:hover{
+    scrollbar-width: initial;
+}
+
+#contentBox2{
+    font-size: 26pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#callMenu{
+    text-decoration: underline;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+    font: inherit;
+}
+
+/*page menu*/
+
+#menuArea{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-items: center;
+    gap: 1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+div[id^="MenuBox"], div[id^="otherBoxes"]{
+    overflow:auto;
+    width: 75%;
+    height: 30vh;
+    border: dotted black;
+    scrollbar-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1em;
+    justify-items: center;
+    align-items: center;
+}
+
+h3{
+    grid-column: 1/ -1;
+}
+
+img{
+    width: auto;
+    height: 15vh;
+}
+
+#menuArea > h2{
+    grid-column: 1 / -1
+}
+
+/*à propos */
+
+#aboutBox{
+    overflow:auto;
+    width: 75%;
+    height: 30vh;
+    scrollbar-width: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1em;
+    justify-items: center;
+    align-items: center;
+}
+
+/*contact*/
+
+.formQuestion{
+    display: grid;
+}
