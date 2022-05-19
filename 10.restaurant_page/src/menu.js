@@ -56,7 +56,7 @@ function createMenu(){
 }
 
 function createBoxes(x,y,thing){  //Notre fonction boucle pour pouvoir générer autant de content que l'on souhaite (need to update css)
-    while (x < y){
+    for (; x < y ; x++){
         const menuBox = document.createElement('div') //créer la boîte mère
         menuArea.appendChild(menuBox);
         menuBox.setAttribute("id", `${thing}${x}`);
@@ -80,7 +80,6 @@ function createBoxes(x,y,thing){  //Notre fonction boucle pour pouvoir générer
         // menuBox.textContent="Hello, je rempli du vide ! "
         // menuBox.textContent+="Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla "
         // menuBox.textContent+=" Et maintenant, on peut être rempli de choses sérieuses, stp ?"
-        x++;
     }
 }
 
