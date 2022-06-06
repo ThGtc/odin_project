@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+            <h1 class="headerContent">To-do list</h1>
+    </header>
+    <nav class="leftPanel">
+        <div class="homepage" id='homepage'>
+            <img src="../icons/robot-industrial-outline.png" alt="">
+            <h1> Accueil</h1>
+        </div>
+        <ul class="projectsArea" id="projectsArea">
+            <div class="addProject" id="addProject">
+                <div class="addProjectContent">
+                    <img src="../icons/history.png" alt="">
+                    <p>Ajouter un projet ?</p>
+                </div>
+            </div>
+            <div id="projectsLists" class="projectsLists"></div>
+        </ul>
+    </nav>
+    <main class="main">
+        <div id="mainAreaHeader">
+            <input type="button" value="Ajouter une tâche à faire" class="newToDo" id="newToDo">
+            <form action="index.html" method="post" class="addTask" id="addTask">
+                <div class="formWrapper">
+                    <div class="popUpHeader">
+                        <h2>Ajouter un to-do</h2>
+                        <a class="close" href="#">&times;</a>
+                    </div>
+                    <label for="taskTitle">Titre de la tâche à réaliser</label>
+                    <input type="text" name="taskTitle" id="taskTitle" maxlength="100" required>
+                    <label for="taskDescription">Description</label>
+                    <textarea name="taskDescription" id="taskDescription" min="1" required placeholder="Description des la tâche..."></textarea>
+                    <label for="taskDueDate">Date limite</label>
+                    <input type="date" name="taskDueDate" id="taskDueDate" maxlength="50" required>
+                    <button type="submit" class="submitButton">Ajouter une nouvelle tâche</button>
+            
+                </div>
+            </form>
+            <h2 class="currentToDo" id="currentToDo">Vos tâches en cours</h2>
+            <button class="deleteProject" id="deleteProject" title="Supprimer ce projet ?">✖ [Remove project ?] ✖</button>
+        </div>
+        <div class="taskBlock">
+        </div>
+    </main>
+</body>
+
+</html>
