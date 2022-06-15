@@ -1,4 +1,4 @@
-Deuxième projet spé vanilla JS dans le parcours "Full Stack Javascript".
+Deuxième projet spé vanilla JS dans le parcours "_Full Stack Javascript_".
 
 https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe
 
