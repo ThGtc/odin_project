@@ -1,4 +1,4 @@
-Premier projet utilisant le module bundler webpack, le troisième dans le parcours "Full stack Javascript".
+Premier projet utilisant le module bundler webpack, le troisième dans le parcours "_Full stack Javascript_".
 
 https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page
 
