@@ -1,6 +1,6 @@
 # Odin project : the beginning of a journey in web development
 
-Projets réalisés au cours du <i><a href="https://www.theodinproject.com/about">Odin Project</a></i>, un parcours permettant d'apprendre les rudiments de la programmation et acquérir ainsi des compétences techniques (HTML, CSS, JS, Git, Bash) en front puis backend, mais aussi des aptitudes essentielles à l'activité d'un développeur : pseudo code, recherche d'informations, résolution de problèmes, élaboration de projets ou encore persévérance.
+Dans ce répertoire se trouvent les projets réalisés au cours du <i><a href="https://www.theodinproject.com/about">Odin Project</a></i>, un parcours permettant d'apprendre les rudiments de la programmation et acquérir ainsi des compétences techniques (HTML, CSS, JS, Git, Bash) en front puis backend, mais aussi des aptitudes essentielles à l'activité d'un développeur : pseudo code, recherche d'informations, résolution de problèmes, élaboration de projets ou encore persévérance.
 
 Débuté à la fin du mois de novembre 2021, il se divise en deux modules : <i><a href="https://www.theodinproject.com/paths/foundations/courses/foundations">Fondations</a></i> (terminé) et <i><a href="https://www.theodinproject.com/paths/full-stack-javascript">Full-Stack Javascript</a></i> (en cours, env. 35% parcouru).
 
