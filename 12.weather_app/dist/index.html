@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webapp météo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header id="topPage">
+        <div id="title">
+            <h1 id="mainTitle">Météo 🌡️ </h1>
+            <h1 id="citySelected"></h1>
+        </div>
+        <div class="modifyLocalisation">
+            <h3 id="changeCity">Changer de ville</h3>
+            <form id="changeLocalisation">
+                <input type="search" name="searchLoc" id="searchLoc">
+                <button type="submit" id="searchBtn">Chercher</button>
+            </form>
+        </div>
+    </header>
+    <div id="weatherOfTheDay"></div>
+    <div id="nextDays" style="visibility:hidden">
+        <h2 id="interTitle"></h2>
+        <img src="../icons/black_down_chevron.png" alt="Dérouler les prévisions ?" title="Dérouler les prévisions ?" id="chevronsBtn" >
+    </div>
+    <div id="weatherForecast"></div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#topPage{
+    display: grid;
+    grid-template-columns: auto;
+    background-color: rgba(181, 199, 204, 0.384);
+    margin: 0;
+    padding: 1em;
+}
+
+#title{
+    display: flex;
+}
+
+.modifyLocalisation{
+    display: flex;
+}
+
+#changeCity{
+    min-width: 10em;
+    align-self: center;
+}
+
+#changeLocalisation{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    align-self: center;
+    gap: 1em;
+}
+
+#searchBtn{
+    width:min-content
+}
+
+#nextDays{
+    display: grid;
+    gap: .5em;
+    grid-template-columns: auto 2fr;
+}
+
+#interTitle{
+    font-size: 28px;
+}
+
+#chevronsBtn{
+    align-self: center;
+}
+
+#weatherForecast{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    visibility:hidden;
+    height: 0;
+}
+
+#weatherOfTheDay > *{
+    border: none;
+}
+
+#prevBtn, #nextBtn{
+    display: flex;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    background-color: #333;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+}
+
+#prevBtn{
+    position: absolute;
+    left: 0;
+    top:100vh;
+}
+
+#nextBtn{
+    position: absolute;
+    right: 0;
+    top:100vh;
+}
+
+#tempZone > *, #skyZone > *{
+    margin: 1em;
+}
+
+div[id^="day"] {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+#forecastDate{
+    grid-column: 1/-1;
+}
+
+div[id^="threeHrsForecast"] {
+    border: solid;
+    border-left: solid 5px rgb(120, 0, 145);
+    padding: 1em;
+    border-radius: 15px;
+  }
