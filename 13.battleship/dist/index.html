@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bataille navale</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header id="header">
+    <button id="newGame">Nouvelle partie</button>
+    <div class="displayBoard"></div>
+    </header>
+    <div class="welcomePopUp" id="welcomePopUp">
+        <div class="welcomeMessage">
+            <h2 class="projectTitle">JS Bataille navale</h2>
+            <p>V1 du projet de recréer ce jeu en vanilla JS, à partir de tests unitaires par la suite déployés en front, avec un système de tour par tour, d'IA...</p>
+            <div class="gameChoice">
+                <p>Souhaitez-vous jouer solo, ou avec un ami ?</p>
+                <button id="humanVScomputerBtn">Contre l'ordinateur</button>
+                <button disabled id="humanVShumanBtn" title="Not yet implemented !">Contre un ami</button>
+                <form action="" id="player1Name" method="get">
+                    <label for="askName">Saisir votre pseudo, joueur 1</label>
+                    <input id="askName" type="text" required>
+                    <input type="submit" value="Confirmer" id="confirmPlayer1Name">
+                </form>
+            </div>
+        </div>
+    </div>
+     <div class="main" id="main">
+         <div class="gameInterface" id="gameInterface0">
+             <div class="numbers" id="numbers0"></div>
+             <div class="letters" id="letters0"></div>
+             <div class="gameboard" id="gameboard0"></div>
+             <h3 class="playerInfo" id="playerInfo0"></h3>
+             <div id="boatCemetery0">
+                <h3>Bateaux coulés :</h3>
+                <ol class="sunkenBoats" id="sunkenBoats0"></ol>
+             </div>
+         </div>
+         <div class="rightPanel">
+            <div class="messageBoards">
+                <h3 class="histoTitle">Historique des coups</h3>
+                <div class="historyBoards" id="historyBoards">
+                    <div class="historyBoard0" id="historyBoard0"></div>
+                    <div class="historyBoard1" id="historyBoard1"></div>
+                </div>
+            </div>
+         </div>
+         <div class="gameInterface" id="gameInterface1">
+            <div class="numbers" id="numbers1"></div>
+            <div class="letters" id="letters1"></div>
+            <div class="gameboard" id="gameboard1"></div>
+            <h3 class="playerInfo" id="playerInfo1"></h3>
+            <div id="boatCemetery1">
+                <h3>Bateaux coulés :</h3>
+                <ol class="sunkenBoats" id="sunkenBoats1"></ol>
+             </div>
+         </div>
+     </div>
+</body>
+</html>

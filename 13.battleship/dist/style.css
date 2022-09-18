@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.welcomePopUp{
+    position: fixed;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.welcomePopUp.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+#main.active{
+    filter: blur(100px);
+    pointer-events: none;
+    user-select: none;
+    visibility: hidden;
+}
+
+#header.active{
+    filter: blur(100px);
+    pointer-events: none;
+    user-select: none;
+    visibility: hidden;
+}
+
+#header{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: #b9b9b93d;
+    border-bottom: 1px solid black;
+    margin-bottom: 1em;
+    height: 6.5em;
+    padding: 1em;
+    align-items: center;
+}
+
+#newGame{
+    justify-self: baseline;
+    height: 2em;
+    border: none;
+}
+
+.displayBoard{
+    justify-content: center;
+    text-align: center;
+}
+
+#startGameBtn{
+    border: none;
+}
+
+#newGame, .displayBoard, #startGameBtn{
+    font-size: 16pt;
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#newGame:hover, #startGameBtn:hover{
+    cursor: pointer;
+    color:darkblue;
+}
+
+.projectTitle{
+    font-weight: 600;
+    margin-bottom: 10px;
+    color:#333;
+}
+
+.displayBoard{
+    display: inherit;
+}
+
+#player1Name{
+    display: none;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: .5em;
+}
+
+.gameInterface{
+    display: grid;
+    grid-template-columns: .05fr 1fr;
+    width: 600px;
+    height: auto;
+    max-height: 550px;
+}
+
+.letters{
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    height: 500px;
+    align-items: center;
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: .5fr repeat(10, 1fr);
+    width: 530px;
+    justify-items: center;
+    grid-column-start: span 2;
+    margin-bottom:1em;
+}
+
+.gameboard{
+    display: grid;
+    height: 500px;
+    width: 500px;
+}
+
+.playerInfo{
+    grid-column: 2;
+    margin-top: 1em;
+}
+
+div[id^="cell"]{
+    background-color:white;
+    border: solid black;
+}
+
+.rightPanel{
+    margin-left: -3em;
+    margin-right: 2em;
+}
+
+.messageBoards, .historyBoards, .historyBoard0, .historyBoard1 {
+    visibility: hidden;
+    min-height: 50px;
+    max-height: 550px;
+    min-width: 150px;
+    max-width: 700px;
+}
+
+.historyBoards, .historyBoard0, .historyBoard1 {  
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.displayBoard::-webkit-scrollbar, .historyBoard0::-webkit-scrollbar, .historyBoard1::-webkit-scrollbar{
+    display: none;
+}
+
+.historyBoards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.histoTitle{
+    visibility: hidden;
+    grid-column: span 2;
+    border-bottom: solid bisque;
+    padding: .5em;
+    margin-bottom: -.2em;
+    text-align: center;
+}
+
+.historyBoard0{
+    border: solid bisque;
+    margin-right: -.25em;
+    /* margin-top: -1.2em; */
+    padding-top: 1.2em;
+}
+
+.historyBoard1{
+    border-right: solid bisque;
+    border-bottom:solid bisque;
+    margin-left: -.25em;
+    padding-left: 1.5em;
+}
+
+.historyBoard0, .historyBoard1{
+    /* margin-top: -1.2em; */
+    padding-top: 1.2em;
+}
+
+.cellHitten, .cellMissed{
+    font-size: 200%;
+    text-align: center;
+}
+
+#boatCemetery0, #boatCemetery1{
+    grid-column: 2;
+    visibility: hidden;
+}
