@@ -1,21 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 //class component > à utiliser pour ce projet
-class Header extends Component {
-  constructor() {
-    super()
-  }
+const Header = () => {
 
-  /*{/*JS functions can be written in here }*/
-
-  render(){
     return (
     <header>
-        <h1>Hello there</h1>
+        <h1>(Ugly) Resume generator</h1>
     </header>
-    );
-  }
-  
+    ); 
 }
 
 export default Header;

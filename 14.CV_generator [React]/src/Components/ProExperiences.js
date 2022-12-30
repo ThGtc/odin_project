@@ -1,25 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Diplomas extends Component {
+const Diplomas = (props) => {
 
-    constructor(props){
-        super(props)
-    }
-
-    render(){
-        return(
-            <div>
-                <h3 className="interTitles">Expériences professionnelles :</h3>
-                {this.props.jobs.map((job) => {
-                    return <li 
-                        key={job.id}> {job.companyName} : {job.positionTitle} - {job.hiringDate} 
-                        <button className="delBtn" title="Supprimer l'expérience pro" onClick={this.props.onDeleteWorkElement} id={job.id}>x</button>
-                        </li>
-                })}
-            </div>
-        )
-    }
-
+    return(
+        <div>
+            <h3 className="interTitles">Expériences professionnelles :</h3>
+            {props.jobs.map((job) => {
+                return <li 
+                    key={job.id}> {job.companyName} : {job.positionTitle} - {job.hiringDate} 
+                    <button className="delBtn" title="Supprimer l'expérience pro" onClick={props.onDeleteWorkElement} id={job.id}>x</button>
+                    </li>
+            })}
+        </div>
+    )
 }
+
+
 
 export default Diplomas;
